@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudando Matematica - Regra de Três Composta</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="variable">
+        <h1>Regra de três Composta</h1>
+        <div class="inputs">
+          <h2>Defina as grandezas de referências</h2>
+          <div class="content">
+            <div>
+              <label>Operário</label>
+              <input type="number" class="clear" id="operator1" value="">
+            </div>
+            <div>
+              <label>Tempo</label>
+              <input type="number" class="clear" id="time1" value="">
+            </div>
+            <div>
+              <label>Produção</label>
+              <input type="number" class="clear" id="production1" value="">
+            </div>
+          </div>
+        </div>
+
+        <div class="inputs">
+          <h2>Parte 2 - Escolha o que deseja calcular</h2>
+          <div class="content">
+            <div style="width: 33%;">
+              <label>Calcular qtde de Operários</label>
+              <input type="radio" name="calc" onclick="choose(this.value)" value="operator">
+            </div>
+            <div style="width: 33%;">
+              <labelc>Calcular o Tempo (dias, horas)</label>
+              <input type="radio" name="calc" onclick="choose(this.value)" value="time">
+            </div>
+            <div>
+              <label>Calcular uma Produção</label>
+              <input type="radio" name="calc" onclick="choose(this.value)" value="production">
+            </div>
+          </div>
+        </div>
+
+        <div class="inputs">
+          <h2>Parte 3</h2>
+          <div class="content">
+            <div>
+              <label>Operário</label>
+              <input type="number" class="clear" id="operator2" value="">
+            </div>
+            <div>
+              <label>Tempo</label>
+              <input type="number" class="clear" id="time2" value="">
+            </div>
+            <div>
+              <label>Produção</label>
+              <input type="number" class="clear" id="production2" value="">
+            </div>
+          </div>
+        </div>
+
+        <button id="calcular" class="btn btn-blue">Calcular</button>
+        <button id="clear" class="btn btn-red">Limpar</button>
+        <button id="btnHome" class="btn btn-green">Home</button>
+
+      </div>
+      <div id="response">
+        <div id="solving">
+          <h1>Resolução</h1>
+          <div id="show-solving">
+            
+          </div>
+        </div>
+        <div id="result">
+          <h1>Resultado</h1>
+          <div>
+            <div id="show-result" class="circle">0
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </body>
+
+  <script>
+    function choose(el){
+      let calcs = document.getElementsByName("calc")
+      for (let i = 0; i < calcs.length; i++) {
+        document.getElementById(`${calcs[i].value}2`).disabled = false;
+      }
+      document.getElementById(`${el}2`).disabled = true;
+    }
+  </script>
+  <script type="module" src="../../app.js"></script>
+  <script src="../js/compound_rule_three.js" type="module"></script>
+</html>

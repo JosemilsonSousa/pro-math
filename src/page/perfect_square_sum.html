@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soma de Quadrado Perfeito</title>
+    <link rel="stylesheet" crossorigin href="./dist/assets/index-D_YjUoRs.css">
+    <script type="module" src="../../app.js"></script>
+    <style type="text/css">
+      #show_result{
+        border: 1px solid #ccc;
+        font-size: 1em !important;
+        width: 110px;
+        height: 110px;
+        padding: 10px;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="variable">
+        <h1>Soma de Quadrado Perfeito</h1>
+        <div class="inputs">
+          <h2>Defina as grandezas de referências</h2>
+          <div class="content">
+            <div>
+              <label>Primeiro Termo</label>
+              <input type="text" class="clear" id="variable1" value="">
+            </div>
+            <div>
+              <label>Segundo Termo</label>
+              <input type="number" class="clear" id="variable2" value="">
+            </div>
+          </div>
+        </div>
+
+        <button id="btn-pss-calc" class="btn btn-blue">Calcular</button>
+        <button id="clear" class="btn btn-red">Limpar</button>
+        <button id="btnHome" class="btn btn-green">Home</button>
+
+      </div>
+      <div id="response">
+        <div id="solving">
+          <h1>Resolução</h1>
+          <div id="show-solving">
+            
+          </div>
+        </div>
+        <div id="result">
+          <h1>Resultado</h1>
+          <div>
+            <div id="show-result" class="rectangle"></div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </body>
+    <script src="../js/perfect_square_sum.js" type="module"></script>
+</html>
